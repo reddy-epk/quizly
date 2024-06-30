@@ -1,0 +1,118 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 88vh;
+  background-image: linear-gradient(
+    to right,
+    #dbbcc4,
+    #f3dfd8,
+    #d8bfd0,
+    #b7b1d5
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 30px;
+  font-family: "Roboto";
+}
+#home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: cener;
+  width: 1200px;
+  height: 520px;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  margin-top: 63px;
+  border-radius: 15px;
+}
+
+.home-img {
+  width: 390px;
+  height: 2750px;
+}
+
+.home-heading {
+  color: #0ea5e9;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+}
+.home-description {
+  font-family: "Roboto";
+  margin-top: 36px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #475569;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-description {
+    font-size: 18px;
+    margin-top: 0px;
+    text-align: left;
+  }
+}
+
+.start-quiz-button {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: #ffffff;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px;
+  background-color: #0ea5e9;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .start-quiz-button {
+    width: 150px;
+    font-size: 16px;
+  }
+}
+.warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef3c7;
+  width: 500px;
+  height: 20px;
+  padding: 12px 12px 12px 24px;
+  border-radius: 4px;
+  opacity: 0px;
+  margin-top: 10px;
+}
+.text {
+  color: #d97706;
+  padding-left: 20px;
+}
+.warning-icon {
+  width: 24px;
+  height: 24px;
+  gap: 0px;
+  opacity: 0px;
+}

@@ -1,0 +1,14 @@
+#notfound-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font-family: "Roboto";
+}
+
+#not-found-image {
+  width: 350px;
+  height: 350px;
+  align-self: center;
+}

@@ -1,0 +1,182 @@
+/* Base styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Main container */
+.game-report-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #dbbcc4,
+    #f3dfd8,
+    #d8bfd0,
+    #b7b1d5
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 80px 20px 20px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8fafc;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  height: 72vh;
+  margin: 20px 0;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Report summary */
+.report-summary {
+  background-color: #f8fbff;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Score container */
+.score-container {
+  border: 5px solid #0ea5e9;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sco {
+  font-size: 30px;
+  color: #0ea5e9;
+  font-weight: bold;
+}
+
+/* Container for answer stats */
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Icons in answer stats */
+.image {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+/* Unattempted questions section */
+.unattempted-questions {
+  width: 100%;
+}
+
+/* Questions list */
+.report-questions-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Individual question item */
+.report-question-item {
+  margin-bottom: 20px;
+}
+
+.report-question-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+/* Options list */
+.single-optionList {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Image options list */
+.default-image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 -5px;
+}
+
+/* Single option item */
+.single-list-item {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+/* Image option item */
+.image-optional-row {
+  width: calc(50% - 10px); /* 50% width minus the gap */
+  margin-bottom: 10px;
+  padding: 0 5px; /* Add padding for gap between images */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Image option */
+.option-img {
+  width: calc(100% - 30px); /* Adjust for the icon space */
+  height: 80px; /* Reduced height */
+  object-fit: contain; /* Changed to contain to avoid cropping */
+  border-radius: 4px;
+}
+.image-optional-row {
+  position: relative;
+}
+
+/* Correct answer icon */
+.report-correct-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* No more unattempted questions message */
+#no-nomoar {
+  text-align: center;
+  padding: 20px;
+}
+.attempted-para {
+  color: #0ea5e9;
+  font-size: 35px;
+  font-style: oblique;
+  font-weight: 600;
+}
+.report-question-item {
+  margin-bottom: 30px; /* Increased margin to prevent overflow */
+}
+
+.report-question-text {
+  margin-bottom: 15px;
+}
