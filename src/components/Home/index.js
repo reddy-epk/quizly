@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 import { DNA } from "react-loader-spinner";
 import Header from "../Header";
+import rawData from "../Modify/index"; // Import the rawData
 import "./index.css";
 
 class Home extends Component {
@@ -13,39 +14,16 @@ class Home extends Component {
     shouldRedirect: false,
   };
 
-  getApiResponse = async () => {
-    const options = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    try {
-      this.setState({ isFetching: true }); // Show loader before fetching
-      const response = await fetch(
-        "https://apis.ccbp.in/assess/questions",
-        options
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      this.setState({ questions: data.questions, isFetching: false }); // Hide loader after success
-    } catch (error) {
-      console.error("Error fetching questions:", error);
-      this.setState({ isFetching: false }); // Hide loader and show error
-    }
-  };
-
-  handleStartQuiz = async () => {
-    try {
-      await this.getApiResponse();
-      this.setState({ shouldRedirect: true }); // Redirect after successful fetch
-    } catch (error) {
-      console.error("Error fetching questions:", error);
-      // Handle errors here (e.g., display an error message to the user)
-    }
+  handleStartQuiz = () => {
+    this.setState({ isFetching: true });
+    // Simulate API fetch delay
+    setTimeout(() => {
+      this.setState({
+        questions: rawData,
+        isFetching: false,
+        shouldRedirect: true,
+      });
+    }, 1000);
   };
 
   render() {
@@ -60,7 +38,6 @@ class Home extends Component {
         <Header />
         {isFetching ? (
           <div className="loader-container" data-testid="loader">
-            render(
             <DNA
               visible={true}
               height="80"
@@ -69,7 +46,6 @@ class Home extends Component {
               wrapperStyle={{}}
               wrapperClass="dna-wrapper"
             />
-            )
           </div>
         ) : (
           <div id="home-container">

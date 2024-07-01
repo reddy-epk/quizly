@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useHistory } from "react-router-dom";
-import { DNA } from "react-loader-spinner";
 import Cookies from "js-cookie";
+import { DNA } from "react-loader-spinner";
 import Header from "../Header";
 import "./index.css";
 
@@ -45,6 +45,7 @@ const QuizGame = () => {
       setIsLoading(false);
     }
   };
+
   const handleNextQuestion = useCallback(() => {
     if (selectedOptions[currentQuestion] !== null || timeLeft === 0) {
       if (currentQuestion < questions.length - 1) {
@@ -71,7 +72,10 @@ const QuizGame = () => {
       );
     }
 
-    if (selectedOptions[currentQuestion] === option.text) {
+    if (
+      selectedOptions[currentQuestion] === option.text &&
+      option.is_correct === "false"
+    ) {
       return (
         <img
           src="https://assets.ccbp.in/frontend/react-js/quiz-game-close-circle-img.png"
@@ -206,7 +210,6 @@ const QuizGame = () => {
             ))}
           </ul>
         );
-
       case "SINGLE_SELECT":
         return (
           <ul className="single-optionList">
@@ -234,17 +237,8 @@ const QuizGame = () => {
 
   if (isLoading) {
     return (
-      <div className="loader-container">
-        render( render(
-        <DNA
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-        />
-        ) )
+      <div className="loader-container" data-testid="loader">
+        <DNA type="TailSpin" color="#00BFFF" height={100} width={100} />
       </div>
     );
   }
@@ -278,9 +272,9 @@ const QuizGame = () => {
           <div className="sub-container">
             <p className="question-count">
               Question <br />
-              <span id="timex">
-                {`${currentQuestion + 1}/${questions.length}`}
-              </span>
+              <span id="timex">{`${currentQuestion + 1}/${
+                questions.length
+              }`}</span>
             </p>
             <p className="timer">{timeLeft}</p>
           </div>
