@@ -30,34 +30,26 @@ const rawData = [
     id: "4b38d184-6c53-4fa8-9176-4bba17f6a639",
     question_text:
       "Which of the following outputs can be achieved if the CSS property justify-content with value space-between is applied to the flexbox container with the flex-direction row?",
-    options_type: "IMAGE",
+    options_type: "DEFAULT",
     options: [
       {
         id: "60f03171-c496-4917-aff9-d8ff72d8f0db",
         text: "flex start",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/flex-start-option-img.png",
         is_correct: false,
       },
       {
         id: "ac160f7b-4ab3-41c7-ae53-b8e3c7bae941",
         text: "flex center",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/flex-center-option-img.png",
         is_correct: false,
       },
       {
         id: "354c825a-3a02-401a-bcc0-3e649104fd1e",
         text: "space between",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/space-between-option-img.png",
         is_correct: true,
       },
       {
         id: "c52215cd-3cd3-4cae-b4c1-18182a4099b9",
         text: "flex end",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/flex-end-option-img.png",
         is_correct: false,
       },
     ],
@@ -227,34 +219,26 @@ const rawData = [
     id: "02b2e3a5-c997-4fb4-a9b6-54d5636a7a59",
     question_text:
       "Which of the following outputs can be achieved if the CSS property border-style with value dashed is applied to an HTML container element?",
-    options_type: "IMAGE",
+    options_type: "DEFAULT",
     options: [
       {
         id: "5cc0de08-325d-43d6-9654-e0fac9d155f6",
         text: "border solid",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/border-solid-option-img.png",
         is_correct: "false",
       },
       {
         id: "85d1588c-d9c4-4440-a147-8edd11bc7fcd",
         text: "border dashed",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/border-dashed-option-img.png",
         is_correct: "true",
       },
       {
         id: "ee6303e4-53bc-4189-ad77-211448d94b06",
         text: "border none",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/border-none-option-img.png",
         is_correct: "false",
       },
       {
         id: "280bd552-e6cd-41a7-b3bc-71aa16c1354c",
         text: "border dotted",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/border-dotted-option-img.png",
         is_correct: "false",
       },
     ],
