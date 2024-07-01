@@ -239,8 +239,6 @@ const rawData = [
       {
         id: "280bd552-e6cd-41a7-b3bc-71aa16c1354c",
         text: "border dotted",
-        image_url:
-          "https://assets.ccbp.in/frontend/react-js/nxt-assess/border-dotted-option-img.png",
         is_correct: "false",
       },
     ],
